@@ -49,3 +49,9 @@ This is an example of implementing CRUD operations using Nestjs and Postgres run
         $ curl -X GET http://localhost:3000/companies
         //[{"name":"Microsoft","id":1}, {"name":"Apple","id":2}]
         ```
+
+6.
+    To finish, run the following in the main project folder:
+    ```bash
+    $docker-compose down
+    ```
