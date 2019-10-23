@@ -6,10 +6,17 @@ networks:
       external: true
 
 services:
+  nest_server:
+      container_name: server
+      image: quaffpotion/nest-crud
+      networks:
+          - nest-net
+      ports:
+          - 3000:3000
 
   db_service:
     container_name: db
-    image: 5f1485c70c9a
+    image: postgres:11
     restart: always
     ports:
         - 5432:5432
