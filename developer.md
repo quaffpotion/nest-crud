@@ -19,3 +19,14 @@ Startup:
 docker-compose up 
 yarn start
 
+Now that we have a connection between nestjs in docker to the database we can run:
+
+Step 1:
+$> docker run -it --rm --name server --net nest-net test-nestjs
+
+Step 2: Make a docker container on the same network as our other containers, have it open bash
+$> docker run -it --rm --net nest-net node bash
+
+Step 3: 
+(prompt for our container)$> curl -d "name=testcurl" -X POST server:3000/companies
+
