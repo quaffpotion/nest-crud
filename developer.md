@@ -14,3 +14,8 @@ Use postman to send requests.
 
 Alternatiely, use this to add a company to the database:
 $> curl -d "name=testcurl" -X POST http://localhost:3000/companies
+
+Startup:
+docker-compose up 
+yarn start
+

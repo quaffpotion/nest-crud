@@ -1,0 +1,29 @@
+version: '3.1'
+
+#If this network is not already created, run docker create nest-net before running docker-compose
+networks:
+  nest-net:
+      external: true
+
+services:
+
+  db_docker:
+    image: postgres
+    restart: always
+    ports:
+        - 5432:5432
+    environment:
+        POSTGRES_USER: db_user
+        POSTGRES_PASSWORD: db_password
+        POSTGRES_DB: db_app
+        PGPORT: 5432
+    networks:
+        - nest-net
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+        - nest-net
