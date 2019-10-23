@@ -22,11 +22,14 @@ yarn start
 Now that we have a connection between nestjs in docker to the database we can run:
 
 Step 1:
-$> docker run -it --rm --name server --net nest-net test-nestjs
+$> docker run -it -p 3000:3000 --rm --name server --net nest-net test-nestjs
 
-Step 2: Make a docker container on the same network as our other containers, have it open bash
+Step 2:
+$> curl -d "name=testcurl" -X POST http://localhost:3000/companies
+
+Step 3: Make a docker container on the same network as our other containers, have it open bash
 $> docker run -it --rm --net nest-net node bash
 
-Step 3: 
+Step 4: 
 (prompt for our container)$> curl -d "name=testcurl" -X POST server:3000/companies
 
