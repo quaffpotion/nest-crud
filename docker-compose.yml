@@ -7,8 +7,9 @@ networks:
 
 services:
 
-  db_docker:
-    image: postgres
+  db_service:
+    container_name: db
+    image: 5f1485c70c9a
     restart: always
     ports:
         - 5432:5432
@@ -20,7 +21,8 @@ services:
     networks:
         - nest-net
 
-  adminer:
+  adminer_service:
+    container_name: adminer
     image: adminer
     restart: always
     ports:

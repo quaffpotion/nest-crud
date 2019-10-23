@@ -9,7 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     CompaniesModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'nest-crud_db_docker_1',
+      host: 'db',
       port: 5432,
       username: 'db_user',
       password: 'db_password',
