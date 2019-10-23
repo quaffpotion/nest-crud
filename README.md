@@ -53,5 +53,5 @@ This is an example of implementing CRUD operations using Nestjs and Postgres run
 6.
     To finish, run the following in the main project folder:
     ```bash
-    $docker-compose down
+    $ docker-compose down
     ```
