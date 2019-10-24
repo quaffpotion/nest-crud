@@ -1,6 +1,5 @@
 version: '3.5'
 
-#If this network is not already created, run docker create nest-net before running docker-compose
 networks:
   nest-net:
       name: app_network
