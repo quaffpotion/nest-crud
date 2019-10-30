@@ -6,6 +6,9 @@ networks:
 
 services:
   nest_server:
+      build:
+        context: .
+        dockerfile: Dockerfile
       container_name: server
       image: quaffpotion/nest-crud
       networks:
