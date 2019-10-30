@@ -12,9 +12,9 @@ This is an example of implementing CRUD operations using Nestjs and Postgres run
     In the main project folder run:
 
     ```bash
-    $ sh run-using-docker.sh
+    $ docker-compose up
     ```
-    (This may take some time)
+    (This may take some time. It will download the necessary resources to build the image if it don't exist then build the image if it doesn't exist, and finally run the project.)
 
 
 3.
